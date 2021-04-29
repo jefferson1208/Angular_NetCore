@@ -1,0 +1,131 @@
+<div class="container main-container" [ngStyle]="{'padding-top': (isMobile) ? '10%' : '5%'}"
+    style="float: left;margin-left: 15px;">
+    <div class="lds-roller" [ngClass]="(isMobile)?'mobile':'not-mobile'" *ngIf="isLoading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h1 style="margin-left: 15px;font-weight: bold;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: #c12c2c;"
+        [ngStyle]="{'margin-top': (isMobile) ? '5%' : '0%'}">
+        Calcule
+        o seu Plano</h1>
+    <div class="row text-center;">
+
+        <div class="col-lg-4" style="padding-bottom: 30px;width: 100%;max-width: 400px;margin-left: 15px;">
+            <div class="card h-100" style="background-color: transparent;padding-bottom: 30px;width: 400px">
+                <div class="card-body">
+                    <form [formGroup]="cotacao" (ngSubmit)="calcular()">
+
+                        <div class="form-group">
+                            <div>
+                                <mat-form-field style="width: 100%;max-width: 400px;">
+                                    <mat-label class="font-weight-bold text-dark" style="font-size: 17px;">
+                                        Origem/Destino</mat-label>
+                                    <mat-select formControlName="custoPlano" (selectionChange)="ocultarResutado()">
+                                        <mat-option *ngFor="let custo of custoPlanos | async" [value]="custo">
+                                            Origem {{custo.origem}} - Destino {{custo.destino}}
+                                        </mat-option>
+
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <mat-form-field style="width: 100%;max-width: 400px;">
+                                    <mat-label class="font-weight-bold text-dark" style="font-size: 17px;">Planos
+                                        Disponíveis</mat-label>
+                                    <mat-select formControlName="plano" (selectionChange)="ocultarResutado()">
+                                        <mat-option *ngFor="let plan of planosDisponiveis | async" [value]="plan">
+                                            {{plan.nomePlano}}
+                                        </mat-option>
+
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <mat-form-field style="width: 100%;max-width: 400px;">
+                                    <mat-label class="font-weight-bold text-dark" style="font-size: 20px;">Minutos
+                                        Desejados</mat-label>
+                                    <input matInput type="number" min="0" formControlName="tempoCliente"
+                                        (ngModelChange)="ocultarResutado()">
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <button type="submit" mat-button class="btn btn-sm btn-danger" style="cursor: pointer;"
+                                    [disabled]="!cotacao.valid">Calcular</button>
+                                <button type="button" mat-button class="btn btn-sm btn-danger"
+                                    style="cursor: pointer;margin-left: 10px;" (click)="limparForm()">Limpar</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3" style="padding-bottom: 30px;width: 100%;max-width: 400px;margin-left: 15px;"
+            *ngIf="visualizarResultado">
+            <div class="card h-100" style="background-color: transparent;padding-bottom: 30px;width: 400px;">
+
+                <div style="margin-left: 20px;">
+                    <h4 style="margin-top: 20px;font-weight: bold;color: #c12c2c;font-size: 20px;text-align: left;height: 20px;"
+                        class="card-title">
+                        Detalhes do Plano: {{cotacao.value.plano.nomePlano}}
+                    </h4>
+                </div>
+
+                <div class="card-body">
+
+                    <div style="align-items: center;">
+                        <p style="color: black;font-size: 20px;text-align: left;">
+
+                            Origem: {{cotacao.value.custoPlano.origem}}<br>
+
+                        </p>
+                        <p style="color: black;font-size: 20px;text-align: left;">
+
+
+                            Destino: {{cotacao.value.custoPlano.destino}}<br>
+
+                        </p>
+
+                        <p style="color: black;font-size: 20px;text-align: left;">
+
+
+                            Custo com Plano: {{ custoPlano | currency:'BRL':'symbol':'1.2-2':'pt' }} <br>
+
+                        </p>
+
+                        <p style="color: black;font-size: 20px;text-align: left;">
+
+
+                            Custo sem Plano: {{ custoSemPlano | currency:'BRL':'symbol':'1.2-2':'pt' }} <br>
+
+                        </p>
+
+                        <p style="color: black;font-size: 20px;text-align: left;">
+
+
+                            Minutos Disponíveis: {{cotacao.value.tempoCliente}}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>

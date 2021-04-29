@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{C386676A-4014-4CB4-86D3-AC1494C13CF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{8A9A320A-AA6F-4DD3-AAAB-894155628D00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{5769E06C-D2C5-4316-8F5F-89671C1D0730}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Data", "3.1 - Data", "{7B46E588-2F21-4902-9EC5-9A4EFD3B53E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{82524AA4-EE20-4931-BCB1-221D5B6871D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{DBDF85C0-9F75-41EC-A511-65E1291864E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planos_Ligacao.Tests", "src\Planos_Ligacao.Tests\Planos_Ligacao.Tests.csproj", "{6B85AAAA-A707-4A7F-9A54-6D87C3358AFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planos_Ligacao.Infra.Data", "src\Planos_Ligacao.Infra.Data\Planos_Ligacao.Infra.Data.csproj", "{AA15CA18-872C-418E-9DD8-AC90EC99287B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planos_Ligacao.Domain", "src\Planos_Ligacao.Domain\Planos_Ligacao.Domain.csproj", "{FA59F57F-F7E5-4B33-BC5D-72E2602B54A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Planos_Ligacao.Application", "src\Planos_Ligacao.Application\Planos_Ligacao.Application.csproj", "{20C48ADA-C74D-4FE7-8D07-8166B76BB4EB}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Planos_Ligacao.Presentation", "src\Planos_Ligacao.Presentation\", "{D6C82F6F-6EAD-4A6D-92DD-CA7226B8BDC0}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52120"
+		Debug.AspNetCompiler.PhysicalPath = "src\Planos_Ligacao.Presentation\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52120\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52120"
+		Release.AspNetCompiler.PhysicalPath = "src\Planos_Ligacao.Presentation\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52120\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52120"
+		SlnRelativePath = "src\Planos_Ligacao.Presentation\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B85AAAA-A707-4A7F-9A54-6D87C3358AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B85AAAA-A707-4A7F-9A54-6D87C3358AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B85AAAA-A707-4A7F-9A54-6D87C3358AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B85AAAA-A707-4A7F-9A54-6D87C3358AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA15CA18-872C-418E-9DD8-AC90EC99287B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA15CA18-872C-418E-9DD8-AC90EC99287B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA15CA18-872C-418E-9DD8-AC90EC99287B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA15CA18-872C-418E-9DD8-AC90EC99287B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA59F57F-F7E5-4B33-BC5D-72E2602B54A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA59F57F-F7E5-4B33-BC5D-72E2602B54A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA59F57F-F7E5-4B33-BC5D-72E2602B54A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA59F57F-F7E5-4B33-BC5D-72E2602B54A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C48ADA-C74D-4FE7-8D07-8166B76BB4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C48ADA-C74D-4FE7-8D07-8166B76BB4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C48ADA-C74D-4FE7-8D07-8166B76BB4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C48ADA-C74D-4FE7-8D07-8166B76BB4EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C82F6F-6EAD-4A6D-92DD-CA7226B8BDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C82F6F-6EAD-4A6D-92DD-CA7226B8BDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C82F6F-6EAD-4A6D-92DD-CA7226B8BDC0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C82F6F-6EAD-4A6D-92DD-CA7226B8BDC0}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B46E588-2F21-4902-9EC5-9A4EFD3B53E5} = {5769E06C-D2C5-4316-8F5F-89671C1D0730}
+		{6B85AAAA-A707-4A7F-9A54-6D87C3358AFF} = {DBDF85C0-9F75-41EC-A511-65E1291864E2}
+		{AA15CA18-872C-418E-9DD8-AC90EC99287B} = {7B46E588-2F21-4902-9EC5-9A4EFD3B53E5}
+		{FA59F57F-F7E5-4B33-BC5D-72E2602B54A6} = {8A9A320A-AA6F-4DD3-AAAB-894155628D00}
+		{20C48ADA-C74D-4FE7-8D07-8166B76BB4EB} = {C386676A-4014-4CB4-86D3-AC1494C13CF4}
+		{D6C82F6F-6EAD-4A6D-92DD-CA7226B8BDC0} = {82524AA4-EE20-4931-BCB1-221D5B6871D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {252CB0A4-ECF2-4907-8D48-606A7F097A64}
+	EndGlobalSection
+EndGlobal
